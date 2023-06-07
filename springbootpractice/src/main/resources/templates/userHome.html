@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>User Home Page</h1>
+<h2>Welcome, <span th:text="${loginedname}"></span>!</h2>
+<a href="/userProfile"><button type="button">Go To <span th:text="${name}"></span> Profile</button></a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+
+<head>
+
+
+</head>
+
+<body>
+<section>
+<h1> User After Login: Home Page</h1>
+
+<h2 th:text="${userM.email}"> </h2>
+<h2 th:text="${userM.password}"> </h2>
+<h2 th:text="${userM.fullName}"> </h2>
+<h2 th:text="${userM.address}"> </h2>
+<h2 th:text="${userM.qualification}"> </h2>
+
+<a href="/update"><button class="btn btn-primary col-md-12">Edit Profile</button></a>
+
+
+
+</section>
+
+</body>
+
+</html>

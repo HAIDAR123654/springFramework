@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+
+<head>
+
+
+</head>
+
+<body>
+
+	<section>
+
+		<div class="container p-5">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card">
+						<div class="card-header text-center fs-4">Register Page</div>
+
+						<!-- message box -->
+						<div th:if="${session.msg}">
+							<p th:text="${session.msg}" class="text-center fs-4 text-success"></p>
+						</div>
+
+						
+						<div class="card-body">
+							<form th:action="@{/update}" method="post" th:object="${modelM}">
+								<div class="mb-3">
+								
+								   <input type=hidden th:value="${modelM.id}" name=id> 
+								 
+									<label>Enter Full Name</label> <input type="text"
+										class="form-control" name="fullName" th:value="${modelM.fullName}">
+
+								</div>
+
+								<div class="mb-3">
+									<label>Enter Email</label> <input type="text"
+										class="form-control" name="email" th:value="${modelM.email}">
+
+								</div>
+
+								<div class="mb-3">
+									<label>Enter Address</label> <input type="text"
+										class="form-control" name="address" th:value="${modelM.address}">
+
+								</div>
+
+								<div class="mb-3">
+									<label>Enter Qualification</label> <input type="text"
+										class="form-control" name="qualification" th:value="${modelM.qualification}">
+
+								</div>
+
+								<div class="mb-3">
+									<label>Enter Password</label> <input type="text"
+										class="form-control" name="password" th:value="${modelM.password}">
+
+								</div>
+
+								<button class="btn btn-primary col-md-12">Update</button>
+
+
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+		</div>
+	</section>
+
+
+
+</body>
+</html>
